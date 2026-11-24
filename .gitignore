@@ -1,0 +1,29 @@
+# Build output (out/mame also holds copies of Sega game ROMs)
+out/
+
+# Sega game ROMs and decrypted ROMs: copyrighted, never commit
+*.zip
+decrypted*/
+*.27
+*.42
+*.43
+*.25
+*.26
+
+# Third-party schematics and PAL dumps
+*.pdf
+!docs/Shinobi_Test_ROM_Guide.pdf
+
+# Photos, video and chat log
+*.jpeg
+*.jpg
+*.heic
+*.HEIC
+*.MOV
+Shinobi_Test_ROM_conversation.txt
+
+# MAME and macOS clutter
+cfg/
+nvram/
+snap/
+.DS_Store
