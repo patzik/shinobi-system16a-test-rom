@@ -348,7 +348,7 @@ MAME will warn about wrong checksums for `epr-12010.43` and `epr-12008.26`. That
 
 ## Limits
 
-- **Tested in MAME only (0.289), not yet on real hardware.** The memory map, I/O and video formats come from MAME's System 16A driver. The boot screen, every menu page, the sound path, and detection of work RAM, palette, text, tile and sprite RAM faults and ROM faults were all checked in MAME.
+- **Tested in MAME (0.289) and on one real board** (171-5306 CPU / 171-5307 video). In MAME, the boot screen, every menu page, the sound path, and detection of work RAM, palette, text, tile and sprite RAM faults and ROM faults were all checked by injecting faults. On the real board, the ROM found and helped repair a dead text RAM address line, sprite RAM faults, a broken scroll trace and a sprite line-buffer fault, and all power-on tests now pass. Other board revisions and fault types have not been seen on hardware yet.
 - Chip names come from the schematics, not from a board, so check them against your PCB. The tile RAM half-to-chip mapping is unknown (see *Fault details*).
 - The 68000 can't read the tile, sprite or sound ROMs, so those are checked visually or by ear, not by CRC.
 - All System 16A Shinobi versions use the same tile, sound and (almost all) sprite ROMs, so the screen text, the beep and the viewers work with every version. The Star bootleg has two different sprite ROMs (IC29/IC30 position, bank 3), so that bank looks different in the sprite viewer.
